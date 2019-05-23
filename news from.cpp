@@ -40,7 +40,32 @@ void login(void){
 }
 int main(void){
 	login();
+	system("cls");
 	cout<<"1-ÍøÂç404¹¥»÷"<<endl;
+	cout<<"2-ÍøÒ³´Û¸Ä¹¥»÷"<<endl;
+	cout<<"3-ÍøÕ¾¹¥»÷ÐÞ¸´"<<endl;
+	cout<<"4-ÍøÕ¾¹¥»÷²éÑ¯"<<endl;
+	cout<<"5-ÍË³ö"<<endl;
+	cout<<"ÇëÊäÈëÐèÒªµÄ¹¦ÄÜ(1-5):";
+	int number;
+	cin>>number;
+	switch(number){
+	case 1:
+		cout<<"ÍøÕ¾404¹¥»÷ÇëÉÔºó"<<endl;
+		break;
+	case 2:
+		cout<<"ÍøÒ³´Û¸Ä¹¥»÷ÇëÉÔºó"<<endl;
+		break;
+	case 3:
+		cout<<"ÍøÕ¾¹¥»÷ÐÞ¸´ÇëÉÔºó"<<endl;
+		break;
+	case 4:
+		cout<<"ÍøÕ¾¹¥»÷¼ÇÂ¼²éÑ¯ÇëÉÔºó"<<endl;
+		break;
+	case 5:
+		return 0;
+	}
 	system("pause");
 	return 0;
+	
 }
