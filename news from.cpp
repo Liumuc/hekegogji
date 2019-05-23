@@ -38,32 +38,63 @@ void login(void){
 		}
 	}
 }
-int main(void){
-	login();
-	system("cls");
+void menuShow(void){
 	cout<<"1-ÍøÂç404¹¥»÷"<<endl;
 	cout<<"2-ÍøÒ³´Û¸Ä¹¥»÷"<<endl;
 	cout<<"3-ÍøÕ¾¹¥»÷ÐÞ¸´"<<endl;
 	cout<<"4-ÍøÕ¾¹¥»÷²éÑ¯"<<endl;
 	cout<<"5-ÍË³ö"<<endl;
+}
+int menuChose(){
+	int n=0;
+	while(1){
+	  cin>>n;
+	  if(cin.fail()){
+		 cin.clear();
+		 cin.sync();
+		 cout<<"ÓÃ»§»òÃÜÂëÊäÈë´íÎó,ÇëÖØÐÂÊäÈë"<<endl;
+	    }else{
+		 break;
+	  }
+	}
+	return n;
+}
+int main(void){
+	login();
+	system("cls");
+			
+
+	
+	while(1){
+	menuShow();
 	cout<<"ÇëÊäÈëÐèÒªµÄ¹¦ÄÜ(1-5):";
-	int number;
-	cin>>number;
-	switch(number){
-	case 1:
+	int n=menuChose();
+
+	system("cls");
+	switch(n){
+        case 1:
 		cout<<"ÍøÕ¾404¹¥»÷ÇëÉÔºó"<<endl;
+		system("pause");
+		system("cls");
 		break;
 	case 2:
 		cout<<"ÍøÒ³´Û¸Ä¹¥»÷ÇëÉÔºó"<<endl;
+		system("pause");
+		system("cls");
 		break;
 	case 3:
 		cout<<"ÍøÕ¾¹¥»÷ÐÞ¸´ÇëÉÔºó"<<endl;
+		system("pause");
+		system("cls");
 		break;
 	case 4:
 		cout<<"ÍøÕ¾¹¥»÷¼ÇÂ¼²éÑ¯ÇëÉÔºó"<<endl;
+		system("pause");
+		system("cls");
 		break;
 	case 5:
 		return 0;
+	  }
 	}
 	system("pause");
 	return 0;
